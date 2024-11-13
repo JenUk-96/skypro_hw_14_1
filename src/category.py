@@ -26,6 +26,7 @@ class Category:
 
     def add_products(self, new_product: Product):
         self.__products.append(new_product)
+        Category.category_count += 1
 
     @property
     def product_list(self):
