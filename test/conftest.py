@@ -21,8 +21,8 @@ def product_tree():
 
 @pytest.fixture()
 def second_category():
-    return Category(name= 'Техника',
-                    description = "Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни",
+    return Category(name='Техника',
+                    description="Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни",
                     products=[
                         Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5),
                         Product("Nokia228", "5TB, Серый цвет, 999MP камера", 1800000.0, 1),

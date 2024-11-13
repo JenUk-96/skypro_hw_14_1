@@ -32,4 +32,10 @@ class Product:
         return cls(name, description, price, quantity)
 
     def __repr__(self):
-        return f"Product(name='{self.name}', description='{self.description}', price='{self.price}', quantity='{self.quantity})'"
+        return f"{self.name}, {self.price} руб. Остаток: {self.quantity} \n"
+
+    def __str__(self):
+        return f"{self.name}, {self.price} руб. Остаток: {self.quantity}"
+
+    def __add__(self, other):
+        return self.quantity * self.price + other.quantity * other.price

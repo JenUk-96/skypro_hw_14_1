@@ -59,3 +59,11 @@ def test_new_product():
     assert new_product.price == 180000
     new_product.price = 12000
     assert new_product.price == 12000
+
+
+def test_str_iphone(iphone):
+    assert "Iphone 15, 210000.0 руб. Остаток: 8"
+
+
+def test_str_samsung(samsung):
+    assert "Samsung Galaxy S23 Ultra, 180000.0 руб. Остаток: 5"

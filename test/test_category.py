@@ -51,3 +51,7 @@ def test_class_category(second_category, firs_category):
     assert second_category.name == "Техника"
     assert second_category.description == "Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни"
     assert len(firs_category.products) == 1
+
+
+def test_str_category(first_category):
+    assert "Смартфоны, Количество продукта: 27"
