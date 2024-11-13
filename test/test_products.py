@@ -2,7 +2,6 @@ import pytest
 
 from src.products import Product
 
-
 product1 = Product(
     "Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5
 )
@@ -20,6 +19,7 @@ def samsung():
         quantity=5
     )
 
+
 new_product = Product.new_product(
     {
         "name": "Samsung Galaxy S23 Ultra",
@@ -28,7 +28,6 @@ new_product = Product.new_product(
         "quantity": 5,
     }
 )
-
 
 
 def test_init(samsung):

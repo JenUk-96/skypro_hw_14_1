@@ -1,5 +1,3 @@
-from itertools import product
-
 from src.products import Product
 
 
