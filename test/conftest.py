@@ -36,3 +36,22 @@ def firs_category():
         name="Телевизоры",
         description="Современный телевизор, который позволяет наслаждаться просмотром, станет вашим другом и помощником",
         products=[Product("MSI GF 76 Katana", "512GB, Черный цвет, 16gb ОЗУ, Win11", 79900, 3)])
+
+@pytest.fixture
+def product_apple() -> Product:
+    return Product("apple", "sweet", 129, 15)
+
+
+@pytest.fixture
+def category_food() -> Category:
+    return Category("food", "some food", ["apple", "banana", "meat", "milk", "eggs"])
+
+
+@pytest.fixture
+def lst_products() -> list:
+    return []
+
+
+@pytest.fixture
+def category_magazines() -> Category:
+    return Category("magazines", "sth to read", ["magazines", "newspapers", "book"])

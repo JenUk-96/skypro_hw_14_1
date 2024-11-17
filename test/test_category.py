@@ -42,3 +42,17 @@ def test_class_category(second_category, firs_category):
     assert second_category.name == "Техника"
     assert second_category.description == "Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни"
     assert len(firs_category.products) == 1
+
+def test_category_init(category_food: Category, lst_products: list) -> None:
+    assert category_food.name == "food"
+    assert category_food.description == "some food"
+
+
+def test_category_product_count(category_magazines: Category, category_food: Category) -> None:
+    assert category_magazines.category_count == 1
+    assert category_food.category_count == 1
+
+
+def test_product_count(category_magazines: Category, category_food: Category) -> None:
+    assert category_magazines.product_count == 3
+    assert category_food.product_count == 5
