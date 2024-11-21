@@ -55,3 +55,7 @@ def test_class_category(second_category, firs_category):
 
 def test_str_category(first_category):
     assert "Смартфоны, Количество продукта: 27"
+
+
+def tests_category_add(no_product):
+    assert "Возникла ошибка TypeError при добавлении не продукта"

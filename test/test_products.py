@@ -67,3 +67,11 @@ def test_str_iphone(iphone):
 
 def test_str_samsung(samsung):
     assert "Samsung Galaxy S23 Ultra, 180000.0 руб. Остаток: 5"
+
+
+def test_invalid_sum(product_one, product_grass_1):
+    assert "Возникла ошибка TypeError при попытке сложения"
+
+
+def test_add_smartphone(product_one, product_two):
+    assert 198000.0

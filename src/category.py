@@ -24,9 +24,12 @@ class Category:
     def products(self):
         return self.__products
 
-    def add_products(self, new_product: Product):
-        self.__products.append(new_product)
-        Category.category_count += 1
+    def add_product(self, new_product):
+        if isinstance(new_product, Product):
+            self.__products.append(new_product)
+            Category.category_count += 1
+        else:
+            raise TypeError
 
     @property
     def product_list(self):
