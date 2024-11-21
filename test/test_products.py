@@ -16,7 +16,7 @@ def samsung():
         name="Samsung Galaxy S23 Ultra",
         description="256GB, Серый цвет, 200MP камера",
         price=180000.0,
-        quantity=5
+        quantity=5,
     )
 
 
@@ -40,10 +40,7 @@ def test_init(samsung):
 @pytest.fixture
 def iphone():
     return Product(
-        name="Iphone 15",
-        description="512GB, Gray space",
-        price=210000.0,
-        quantity=8
+        name="Iphone 15", description="512GB, Gray space", price=210000.0, quantity=8
     )
 
 

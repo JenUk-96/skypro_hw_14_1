@@ -3,6 +3,7 @@ from src.products import Product
 
 class Category:
     """Класс категорий продуктов"""
+
     name: str  # Имя категории
     description: str  # Описание категории продукта
     products: list  # Список товаров категории
@@ -35,9 +36,7 @@ class Category:
     def product_list(self):
         product_str = ""
         for product in self.products:
-            product_str += (
-                f"{product.name}, {product.price} руб. Остаток: {product.quantity} шт.\n"
-            )
+            product_str += f"{product.name}, {product.price} руб. Остаток: {product.quantity} шт.\n"
         return product_str
 
     def __str__(self):
