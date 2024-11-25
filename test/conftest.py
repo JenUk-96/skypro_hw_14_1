@@ -77,3 +77,29 @@ def category_grass():
             Product("Газонная трава 2", "Выносливая трава", 450.0, 15),
         ],
     )
+
+@pytest.fixture
+def product_apple() -> Product:
+    return Product("apple", "sweet", 129, 15)
+
+
+@pytest.fixture
+def category_food() -> Category:
+    return Category("food", "some food", ["apple", "banana", "meat", "milk", "eggs"])
+
+
+@pytest.fixture
+def lst_products() -> list:
+    return []
+
+
+@pytest.fixture
+def category_magazines() -> Category:
+    return Category("magazines", "sth to read", ["magazines", "newspapers", "book"])
+
+
+@pytest.fixture
+def str_exp() -> list:
+    return ["Samsung Galaxy S23 Ultra, 180000.0 руб. Остаток: 5 шт.",
+            "Iphone 15, 210000.0 руб. Остаток: 8 шт.",
+            "Xiaomi Redmi Note 11, 31000.0 руб. Остаток: 14 шт."]
