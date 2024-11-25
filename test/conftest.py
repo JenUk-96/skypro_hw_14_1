@@ -78,6 +78,7 @@ def category_grass():
         ],
     )
 
+
 @pytest.fixture
 def product_apple() -> Product:
     return Product("apple", "sweet", 129, 15)

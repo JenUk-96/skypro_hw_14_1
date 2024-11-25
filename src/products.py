@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class BaseProduct(ABC):
 
     @abstractmethod
@@ -14,6 +15,7 @@ class MixinLog:
 
     def __repr__(self):
         return f"{self.__class__.__name__}({self.name}, {self.description}, {self.price}, {self.quantity})"
+
 
 class Product(MixinLog, ABC):
     """Класс продукт, который обладает общими свойствами"""
@@ -36,14 +38,12 @@ class Product(MixinLog, ABC):
     def price(self) -> float:
         return self.__price
 
-
     @price.setter
     def price(self, value: float):
         if value > 0:
             self.__price = value
         elif value <= 0:
             print("Цена не должна быть нулевая или отрицательная")
-
 
     @classmethod
     def new_product(cls, product_data):
@@ -52,7 +52,6 @@ class Product(MixinLog, ABC):
         price = product_data.get("price")
         quantity = product_data.get("quantity")
         return cls(name, description, price, quantity)
-
 
     def __str__(self):
         return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт"

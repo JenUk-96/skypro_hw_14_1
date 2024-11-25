@@ -42,8 +42,8 @@ def iphone():
 def test_category_init(first_category):
     assert first_category.name == "Смартфоны"
     assert (
-        first_category.description
-        == "Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни"
+            first_category.description
+            == "Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни"
     )
     assert len(first_category.products) == 2
 
@@ -51,8 +51,8 @@ def test_category_init(first_category):
 def test_class_category(second_category, firs_category):
     assert second_category.name == "Техника"
     assert (
-        second_category.description
-        == "Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни"
+            second_category.description
+            == "Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни"
     )
     assert len(firs_category.products) == 1
 
