@@ -32,6 +32,16 @@ class Category:
         else:
             raise TypeError
 
+    def middle_price(self) -> float:
+        """ Метод подсчета среднего ценника всех товаров. """
+        total = sum(product.price for product in self.__products)
+        try:
+            avg = total / len(self.__products)
+        except ZeroDivisionError:
+            return "На ноль делить нельзя."
+        else:
+            return round(avg, 2)
+
     @property
     def product_list(self):
         product_str = ""

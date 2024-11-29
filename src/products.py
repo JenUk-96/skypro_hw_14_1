@@ -27,6 +27,10 @@ class Product(MixinLog, ABC):
 
     def __init__(self, name: str, description: str, price: float, quantity: int):
         """Метод для инициализации экземпляра класса. Задаем значения атрибутам экземпляра."""
+
+        if quantity == 0:
+            raise ValueError("Товар с нулевым значением не может быть добавлен.")
+
         self.name = name
         self.description = description
         self.__price = price
@@ -96,7 +100,7 @@ class LawnGrass(Product):
     germination_period: int  # Срок прорастания
     color: str  # Цвет травы
 
-    def __init__(self, name, description, price, quantity, country: str, germination_period: str, color: str):
+    def __init__(self, name, description, price, quantity, country: str, germination_period: int, color: str):
         """Метод для инициализации экземпляра класса Трава газонная. Задаем значения атрибутам экземпляра"""
         super().__init__(name, description, price, quantity)
         self.country = country

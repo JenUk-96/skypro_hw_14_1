@@ -2,6 +2,7 @@ import pytest
 
 from src.category import Category
 from src.products import Product
+from test.conftest import second_category
 
 new_product = Product.new_product(
     {
@@ -63,3 +64,16 @@ def test_str_category(first_category):
 
 def tests_category_add(no_product):
     assert "Возникла ошибка TypeError при добавлении не продукта"
+
+
+def test_middle_price_empy():
+    category = Category("Category", "Description", [])
+    assert category.middle_price() == "На ноль делить нельзя."
+
+
+def test_middle_price_2(second_category):
+    assert second_category.middle_price() == 686633.33
+
+
+def test_middle_price_1(first_category):
+    assert first_category.middle_price() == 195000.0

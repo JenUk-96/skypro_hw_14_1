@@ -1,9 +1,6 @@
-import unittest
-
 import pytest
 
-from src.category import Category
-from src.products import LawnGrass, Product, Smartphone
+from src.products import Product
 
 product1 = Product(
     "Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5
@@ -89,4 +86,11 @@ def test_repr_2(product_two):
 
 def test_repr_3(product_tree):
     product3 = Product("Xiaomi Redmi Note 11", "1024GB, Синий", 31000.0, 14)
-    assert  repr(product3) == "Product(Xiaomi Redmi Note 11, 1024GB, Синий, 31000.0, 14)"
+    assert repr(product3) == "Product(Xiaomi Redmi Note 11, 1024GB, Синий, 31000.0, 14)"
+
+
+def test_product_init_value_error() -> None:
+    with pytest.raises(ValueError) as e:
+        Product("test", "incorrect quantity", 10, 0)
+
+    assert str(e.value) == "Товар с нулевым значением не может быть добавлен."
