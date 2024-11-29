@@ -68,7 +68,7 @@ def tests_category_add(no_product):
 
 def test_middle_price_empy():
     category = Category("Category", "Description", [])
-    assert category.middle_price() == "На ноль делить нельзя."
+    assert category.middle_price() == 0.0
 
 
 def test_middle_price_2(second_category):

@@ -38,7 +38,7 @@ class Category:
         try:
             avg = total / len(self.__products)
         except ZeroDivisionError:
-            return "На ноль делить нельзя."
+            return 0.0
         else:
             return round(avg, 2)
 
